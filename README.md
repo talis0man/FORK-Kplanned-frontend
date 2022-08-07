@@ -23,52 +23,52 @@
 "-" - помечены файлы и папки недоступные для использования
 
 ```
-|+ dist/                            - папка с build файлами
+|+ .storybook/                      - папка с файлами конфигурации Storybook
+  |+ main.js                        - файл конфигурации Storybook
+  |+ preview.js                     - файл глобальных импортов для превью Storybook
+|+ __mocks__/                       - папка с моками для тестирования
+  |+ fileMock.js                    - файл mock
+|+ cypress/                         - папка с файлами Cypress
+  |+ fixtures/                      - папка с данными для тестов Cypress
+  |+ integration/                   - папка с тестами Cypress
+  |+ plugins/                       - папка для конфигурации плагинов Cypress
+    |+ index.ts                     - файл конфигурации плагинов Cypress
+  |+ support/                       - папка для конфигурации модулей Cypress
+    |+ commands.ts                  - файл для конфигурации кастомных команд Cypress
+    |+ index.ts                     - файл для объявления глобальных модулей Cypress
+  |+ .eslintrc.json                 - файл для конфигурации EsLint под Cypress
+  |+ tsconfig.json                  - файл конфигурации TypeScript под Cypress
+|+ public/                          - корневая папка на сервере
 |+ src/                             - папка с dev файлами
   |+ assets/                        - папка с ресурсами
-    |+ fonts/                       - папка со шрифтами
-      |+ 'font-name'/               - папка со шрифтом
-        |+ 'font-name'.woff         - файл шрифта woff
-        |+ 'font-name'.woff2        - файл шрифта woff2
-    |+ img/                         - папка с изображениями
-      |+ jpg/                       - сюда кладем jpg
-      |+ png/                       - сюда кладем png
-      |+ svg/                       - сюда кладем svg
-    |+ sprite/                      - папка для svg-спрайта
-      |+ svg/                       - папка для svg-файлов вставляемых в спрайт
-        |+ 'svg-name'.svg           - файл svg
-      |- entry.js                   - файл конфигурации спрайта
-    |+ styles/                      - папка со стилями
-      |+ _common.scss               - файл с общими стилями
-      |+ _fonts.scss                - файл с подключение шрифтов
-      |+ _index.scss                - файл точки входа для стилей
-      |+ _markup.scss               - файл базовой media-разметки
-      |+ _mixins.scss               - файл с scss-миксинами
-      |+ _reset.scss                - файл сбрасывающий стили браузера в 0
-      |+ _vars.scss                 - файл с scss-переменными
   |+ components/                    - папка с компонентами проекта
-    |+ 'UiCompName'.vue             - файл vue-компонента
+  |+ hooks/                         - папка с хуками проекта
   |+ router/                        - папка с конфигурацией роутера
-    |+ index.ts                     - файл конфигурации роутера
+  |+ services/                      - папка с сервисами
   |+ store/                         - папка хранилища
-    |+ index.ts                     - файл хранилища
-  |+ views /                        - папка с файлами представлений
-    |+ layouts /                    - папка с макетами страниц
-      |+ DefaultLayout.vue          - файл с дефолтным макетом
-    |+ 404.vue                      - файл страницы 404
-    |+ Main.vue                     - файл главной страницы
-    |+ About.vue                    - файл второстепенной страницы
-  |+ App.vue                        - файл приложения
+  |+ stories/                       - папка с stories для Storybook
+    |+ assets/                      - папка с ресурсами Storybook
+  |+ types/                         - папка вспомогательных типов
+  |+ utils/                         - папка вспомогательных функций
+  |+ index.css                      - файл со стилями глвной страницы
+  |+ main.tsx                       - файл скрипта подключаемого на страницу
+  |+ vite-env.d.ts                  - файл с определениями типов из переменных окружения
+|+ .eslintignore                    - файл с исключениями EsLint
 |- eslintrc.js                      - файл конфигурации EsLint
 |+ .gitignore                       - файл с исключениями git
+|- .prettierrc                      - файл конфигурации Prettier
+|+ .stylelintignore                 - файл с исключениями Stylelint
+|- .stylelintrc.json                - файл конфигурации Stylelint
+|- cypress.json                     - файл конфигурации Cypress
 |+ index.html                       - файл монтирования приложения
+|- jest.config.js                   - файл конфигурации Jest
+|- LICENSE                          - файл лицензионного соглашения
 |- package.json                     - файл конфигурации проекта npm
 |- package-lock.json                - файл конфигурации проекта npm
 |- README.md                        - файл readme
 |- tsconfig.json                    - файл конфигурации TypeScript
 |- tsconfig.node.json               - файл конфигурации TypeScript
 |+ vite.config.js                   - файл конфигурации Vite
-|- yarn.lock                        - файл конфигурации проекта yarn
 ```
 
 ### Руководство по стилю кода
